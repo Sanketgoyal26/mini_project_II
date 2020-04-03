@@ -1,0 +1,8 @@
+<h1>Welcome to Tables Sections</h1>
+<% products.forEach(function(prod){ %>
+    <p><%= prod.name %></p>
+    <p><%= prod.price %></p>
+    <p><%= prod.description %></p>
+    <img src="<%=prod.image %>">
+    
+    <% }) %>
