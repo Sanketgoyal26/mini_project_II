@@ -1,8 +1,30 @@
-<h1>Welcome to Tables Sections</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <title>Tables</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Welcome to Tables Section</h1>
+                <h2>The Tables are below : </h2>
+            </div>
+        </div>
+    
 <% products.forEach(function(prod){ %>
+    <img style="height: 400px; width: 500px;" src="<%=prod.image %>">
     <p><%= prod.name %></p>
     <p><%= prod.price %></p>
-    <p><%= prod.description %></p>
-    <img src="<%=prod.image %>">
     
     <% }) %>
+</body>
+</html>
+
