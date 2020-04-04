@@ -116,6 +116,35 @@ function isLoggedIn(req, res, next) {
     res.redirect("/home2");
 }
 
+app.get('/home/:id', function(req, res)
+{
+    furniture.findById(req.params.id.trim(), function(err, alfur)
+    {
+        if(err)
+        {
+            console.log("Error occured")
+            console.log(err)
+        }
+        else{
+            res.render('show', {products:alfur})
+        }
+    })
+})
+
+app.get('/home2/:id', function(req, res)
+{
+    furniture.findById(req.params.id.trim(), function(err, alf)
+    {
+        if(err)
+        {
+            console.log("An error occured")
+            console.log(err)
+        }
+        else{
+            res.render('checkout',{products:alf})
+        }
+    })
+})
 app.listen(3000, function()
 {
     console.log("server is running at port 3000")
